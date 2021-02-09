@@ -7,27 +7,57 @@ from typing import List
 
 def convert_to_absolute(number: float) -> float:
     if number < 0:
-        number = number * -1
+        number = -number
 
-    print(number)
     return 0
 
 
 def use_prefixes() -> List[str]:
     prefixes, suffixe = 'JKLMNOPQ', 'ack'
+    #on commence par créer une liste vide
+    liste_nom = []
+    for pre in prefixes:
+        #on lie tt les pre avec suffixe => la fonction append ajoute des éléments à la fin de la liste
+        liste_nom.append(pre + suffixe)
+
 
     return [""]
 
 
 def prime_integer_summation() -> int:
-    return 0
+number = 1
+count = 0
+Somme = 0
+while count != 100 :
+    for j in range(number-1 , 0 , -1):
+        if number%j==0:
+            break
+        if j==1:
+            count += 1
+            Somme += number
+
+
+
+
+    return Somme
 
 
 def factorial(number: int) -> int:
+    i=0
+    produit = 1
+    while i < number
+        i += 1
+        produit = number * i
     return 0
 
 
 def use_continue() -> None:
+    for i in range(1 , 11):
+        if i==5:
+            continue
+
+        print(i)
+
     pass
 
 
@@ -45,7 +75,7 @@ def main() -> None:
 
     number = 10
     print(f"La factiorelle du nombre {number} est: {factorial(number)}")
-    
+
     print(f"L'affichage de la boucle est:")
     use_continue()
 
